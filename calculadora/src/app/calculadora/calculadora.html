@@ -1,1 +1,24 @@
-<p>calculadora works!</p>
+<main class="contenedor">
+  <p class="etiqueta">ISC-305 · Programación Web</p>
+  <p class="descripcion">Calculadora</p>
+  <section class="tarjeta">
+    
+    <h2>Calculadora básica</h2>
+    <input type="text" id="numero-a" type="number" [(ngModel)]="a" placeholder="Número 1">
+    <input type="text" id="numero-b" type="number" [(ngModel)]="b" placeholder="Número 2">
+    
+    <p>El resultado es {{ resultado() }}</p>
+    
+    <div class="accionesx">
+      <button type="button" (click)="sumar()">Sumar</button>
+      <button type="button" (click)="restar()">Restar</button>
+      <button type="button"
+        class="secundario"
+        (click)="reiniciar()"
+        [disabled]="resultado() === 0">
+        Reiniciar
+      </button>
+
+    </div>
+  </section>
+</main>
